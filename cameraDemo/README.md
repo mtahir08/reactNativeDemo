@@ -1,4 +1,5 @@
 #Basic Camera Demo 
+#### Implemented capturing images with back/front camera switch and falshmode changes on android api 23
 
 below url really help to setup and run
 https://github.com/lwansbrough/react-native-camera
