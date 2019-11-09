@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, StatusBar, View } from 'react-native';
 import { FlexBox } from './components/flexbox'
-import { Images } from './components/images'
+// import { Images } from './components/images'
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Images />
+      <FlexBox />
     </SafeAreaView>
   );
 }
