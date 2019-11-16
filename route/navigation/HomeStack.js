@@ -3,11 +3,15 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import Home from './../Screens/Home';
+import First from './../Screens/First';
+import Second from './../Screens/Second';
 import Colors from './../constants/Colors';
 
 const HomeStack = createStackNavigator(
     {
         Home,
+        First,
+        Second,
     }, {
     // headerMode: 'none',
     defaultNavigationOptions: {

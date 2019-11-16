@@ -5,7 +5,7 @@ import { rootStyles } from './Styles'
 export default function App() {
     return (
         <View style={rootStyles.container}>
-            <Text style={rootStyles.text}>Third</Text>
+            <Text style={rootStyles.title}>Third</Text>
         </View>
     );
 }

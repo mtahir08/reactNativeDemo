@@ -4,7 +4,7 @@ import { rootStyles } from './Styles'
 export default function App() {
     return (
         <View style={rootStyles.container}>
-            <Text style={rootStyles.text}>Settings</Text>
+            <Text style={rootStyles.title}>Settings</Text>
         </View>
     );
 }

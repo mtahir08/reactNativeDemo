@@ -7,8 +7,12 @@ export const rootStyles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    text: {
+    title: {
         fontSize: 30,
+        textAlign: 'center'
+    },
+    text: {
+        fontSize: 20,
         textAlign: 'center'
     }
 });
