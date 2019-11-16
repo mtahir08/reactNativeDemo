@@ -14,6 +14,7 @@ const TabNavigator = createBottomTabNavigator({
         showLabel: false,
         safeAreaInset: { bottom: 'never', top: 'never' }
     },
+    initialRouteName: "SettingsStack"
 });
 
 export { TabNavigator };

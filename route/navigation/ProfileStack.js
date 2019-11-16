@@ -8,7 +8,13 @@ import Colors from './../constants/Colors';
 const ProfileStack = createStackNavigator(
     {
         Profile,
+    }, {
+    // headerMode: 'none',
+    defaultNavigationOptions: {
+        headerStyle: {},
+        headerForceInset: { top: "never" }
     }
+}
 );
 ProfileStack.path = '';
 

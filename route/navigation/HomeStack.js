@@ -8,8 +8,13 @@ import Colors from './../constants/Colors';
 const HomeStack = createStackNavigator(
     {
         Home,
+    }, {
+    // headerMode: 'none',
+    defaultNavigationOptions: {
+        headerStyle: {},
+        headerForceInset: { top: "never" }
     }
-);
+});
 
 HomeStack.navigationOptions = {
     tabBarLabel: 'Home',

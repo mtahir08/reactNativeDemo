@@ -9,12 +9,22 @@ import Colors from './../constants/Colors';
 const SettingsStack = createStackNavigator(
     {
         Settings,
+    },
+    {
+        // headerMode: 'none',
+        defaultNavigationOptions: {
+            headerStyle: {},
+            headerForceInset: { top: "never" }
+        }
     }
 );
 
 SettingsStack.navigationOptions = {
     tabBarLabel: 'Settings',
+    headerStyle: { height: 20 },
+    headerBackground: 'red',
 
+    // headerMode: 'none',
     tabBarIcon: ({ focused }) => {
         return (
             <Ionicons
