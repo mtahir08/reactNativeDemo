@@ -2,12 +2,12 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { Ionicons } from '@expo/vector-icons';
 
-import FirstScreen from './../Screens/First';
+import Home from './../Screens/Home';
 import Colors from './../constants/Colors';
 
 const HomeStack = createStackNavigator(
     {
-        Home: FirstScreen,
+        Home,
     }
 );
 

@@ -2,12 +2,12 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { Ionicons } from '@expo/vector-icons';
 
-import SecondScreen from './../Screens/Second';
+import Profile from './../Screens/Profile';
 import Colors from './../constants/Colors';
 
 const ProfileStack = createStackNavigator(
     {
-        Profile: SecondScreen,
+        Profile,
     }
 );
 ProfileStack.path = '';
