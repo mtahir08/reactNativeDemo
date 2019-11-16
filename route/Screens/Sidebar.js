@@ -25,28 +25,26 @@ const SideBar = props => {
                 </View>
             </ImageBackground>
             <View style={styles.main}>
-                <View style={styles.brandWrapper}>
-                    <Text style={styles.avatarName}>{"John Deo"}</Text>
-                    <View style={styles.mainContentWrapper}>
-                        <TouchableOpacity style={styles.mainContent} onPress={() => { }}>
-                            <View style={styles.size}>
-                                <Icon name={'person'} type={'MaterialIcons'} style={styles.icon} />
-                            </View>
-                            <Text style={styles.text}>Profile</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.mainContent} onPress={() => { }}>
-                            <View style={styles.size}>
-                                <Icon name={'md-settings'} type={'Ionicons'} style={styles.icon} />
-                            </View>
-                            <Text style={styles.text}>Settings</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.mainContent} onPress={() => { }}>
-                            <View style={styles.size}>
-                                <Icon name={'logout'} type={'MaterialCommunityIcons'} style={styles.icon} />
-                            </View>
-                            <Text style={styles.text}>Logout</Text>
-                        </TouchableOpacity>
-                    </View>
+                <Text style={styles.avatarName}>{"John Deo"}</Text>
+                <View style={styles.mainContentWrapper}>
+                    <TouchableOpacity style={styles.mainContent} onPress={() => { props.navigation.navigate('Profile') }}>
+                        <View style={styles.size}>
+                            <Icon name={'person'} type={'MaterialIcons'} style={styles.icon} />
+                        </View>
+                        <Text style={styles.text}>Profile</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.mainContent} onPress={() => { props.navigation.navigate('Settings') }}>
+                        <View style={styles.size}>
+                            <Icon name={'md-settings'} type={'Ionicons'} style={styles.icon} />
+                        </View>
+                        <Text style={styles.text}>Settings</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.mainContent} onPress={() => { }}>
+                        <View style={styles.size}>
+                            <Icon name={'logout'} type={'MaterialCommunityIcons'} style={styles.icon} />
+                        </View>
+                        <Text style={styles.text}>Logout</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
@@ -82,9 +80,7 @@ const styles = StyleSheet.create({
     },
     main: {
         height:
-            Dimensions.get("screen").height - Dimensions.get("screen").height / 5
-    },
-    brandWrapper: {
+            Dimensions.get("screen").height - Dimensions.get("screen").height / 5,
         marginTop: 65
     },
     avatarName: {
@@ -100,19 +96,6 @@ const styles = StyleSheet.create({
     mainContentWrapper: {
         marginTop: 45,
         padding: 20
-    },
-    companyWorkWrapper: {
-        width: "90%",
-        flexWrap: "wrap",
-        alignSelf: "center",
-        flexDirection: "row",
-        justifyContent: "center"
-    },
-    company: {
-        textDecorationLine: "underline",
-    },
-    work: {
-        color: "#000",
     },
     mainContent: {
         borderBottomWidth: 1,
