@@ -12,7 +12,8 @@ const TabNavigator = createBottomTabNavigator({
 }, {
     tabBarOptions: {
         showLabel: false,
-    }
+        safeAreaInset: { bottom: 'never', top: 'never' }
+    },
 });
 
 export { TabNavigator };
