@@ -1,5 +1,4 @@
 package com.pushnotification;
-
 import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
@@ -8,6 +7,7 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -24,7 +24,7 @@ public class MainApplication extends Application implements ReactApplication {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
-          // packages.add(new MyReactNativePackage());
+          packages.add(new RNFirebaseMessagingPackage());
           return packages;
         }
 
