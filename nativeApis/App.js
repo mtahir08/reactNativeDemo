@@ -21,6 +21,7 @@ import {
 
 import ImaagePicker from './ImagePicker';
 import Phone from './Phone';
+import NetInfo from './NetInfo';
 
 const App: () => React$Node = () => {
   const [component, setComponent] = useState(null);
@@ -31,6 +32,8 @@ const App: () => React$Node = () => {
         return <ImaagePicker />;
       case 'dial':
         return <Phone />;
+      case 'netInfo':
+        return <NetInfo />;
       default:
         return null;
     }
@@ -55,6 +58,12 @@ const App: () => React$Node = () => {
                 setComponent('dial');
               }}
               title="Open Dial"
+            />
+            <Button
+              onPress={() => {
+                setComponent('netInfo');
+              }}
+              title="NetInfo"
             />
           </>
         )}
