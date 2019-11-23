@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "292013977041",
+    "firebase_url": "https://uit-batch-project.firebaseio.com",
+    "project_id": "uit-batch-project",
+    "storage_bucket": "uit-batch-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292013977041:android:40e4e6794b728b00a604f0",
+        "android_client_info": {
+          "package_name": "com.pushnotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292013977041-sfr1okscs2r7t2p0hnosqd5k5brec44d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsZkKkKbc6cYTLVIdBehvv375L5LsBSAg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292013977041-sfr1okscs2r7t2p0hnosqd5k5brec44d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
