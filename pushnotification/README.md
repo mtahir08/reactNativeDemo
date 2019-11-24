@@ -9,7 +9,7 @@
    ```implementation 'com.google.firebase:firebase-analytics:17.2.0'
    implementation 'com.google.firebase:firebase-messaging:20.0.1'
    ```
-7. Goto android/app/main/MainActivity.java file and add following line in upper part
+7. Goto android/app/main/MainApplication.java file and add following line in upper part
    `import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;`
    Also add following line in getPackages()
    `packages.add(new RNFirebaseMessagingPackage());`
