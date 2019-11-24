@@ -20,8 +20,7 @@
 
 9. Goto android/setting.gradle
 
-```include ':react-native-firebase'
-project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
-```
+`include ':react-native-firebase'`
+`project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')`
 
 10. install `react-native-firebase` and check code in App.js
