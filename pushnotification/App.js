@@ -19,14 +19,18 @@ import firebase from 'react-native-firebase'
 const App = () => {
 
   const getToken = async () => {
-    let fcmToken = await AsyncStorage.getItem('fcmToken');
-    console.log("before fcmToken: ", fcmToken);
-    if (!fcmToken) {
-      fcmToken = await firebase.messaging().getToken();
-      if (fcmToken) {
-        console.log("after fcmToken: ", fcmToken);
-        await AsyncStorage.setItem('fcmToken', fcmToken);
+    try {
+      let fcmToken = await AsyncStorage.getItem('fcmToken');
+      console.log("before fcmToken: ", fcmToken);
+      if (!fcmToken) {
+        fcmToken = await firebase.messaging().getToken();
+        if (fcmToken) {
+          console.log("after fcmToken: ", fcmToken);
+          await AsyncStorage.setItem('fcmToken', fcmToken);
+        }
       }
+    } catch (error) {
+      console.log(error);
     }
   }
 
@@ -36,7 +40,7 @@ const App = () => {
         getToken();
       })
       .catch(error => {
-        console.log('permission rejected');
+        console.log('permission rejected', error);
       });
   }
 
@@ -50,18 +54,21 @@ const App = () => {
           console.log("Request Permission");
           requestPermission();
         }
-      });
+      })
+      .catch((error) => {
+        console.log("error", error)
+      })
   }
 
   useEffect(() => {
     checkPermission()
-  })
+  }, [])
 
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-
+      <StatusBar barStyle="light-content" />
+      <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ fontSize: 40 }}>Push Notification</Text>
       </SafeAreaView>
     </>
   );
