@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -22,6 +22,7 @@ import {
 import ImaagePicker from './ImagePicker';
 import Phone from './Phone';
 import NetInfo from './NetInfo';
+import AppStateChange from './AppState';
 
 const App: () => React$Node = () => {
   const [component, setComponent] = useState(null);
@@ -34,6 +35,8 @@ const App: () => React$Node = () => {
         return <Phone />;
       case 'netInfo':
         return <NetInfo />;
+      case 'appState':
+        return <AppStateChange />;
       default:
         return null;
     }
@@ -46,27 +49,33 @@ const App: () => React$Node = () => {
         {component ? (
           showComponents()
         ) : (
-          <>
-            <Button
-              onPress={() => {
-                setComponent('imagePicker');
-              }}
-              title="Image Picker"
-            />
-            <Button
-              onPress={() => {
-                setComponent('dial');
-              }}
-              title="Open Dial"
-            />
-            <Button
-              onPress={() => {
-                setComponent('netInfo');
-              }}
-              title="NetInfo"
-            />
-          </>
-        )}
+            <>
+              <Button
+                onPress={() => {
+                  setComponent('imagePicker');
+                }}
+                title="Image Picker"
+              />
+              <Button
+                onPress={() => {
+                  setComponent('dial');
+                }}
+                title="Open Dial"
+              />
+              <Button
+                onPress={() => {
+                  setComponent('netInfo');
+                }}
+                title="NetInfo"
+              />
+              <Button
+                onPress={() => {
+                  setComponent('appState');
+                }}
+                title="AppState"
+              />
+            </>
+          )}
       </SafeAreaView>
     </>
   );
